@@ -1,0 +1,279 @@
+/* styles/tailwind.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:BNCE@-50..50&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.star {
+  width: 5px;
+  height: 2px;
+  background-color: #00b7ff;
+  position: absolute;
+  animation: shooting-stars 4s linear infinite;
+  opacity: 0;
+}
+
+.star:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+  top: 20%;
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.star:nth-child(3) {
+  top: 30%;
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.star:nth-child(4) {
+  top: 40%;
+  left: 40%;
+  animation-delay: 3s;
+}
+
+.star:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  animation-delay: 4s;
+}
+
+@keyframes shooting-stars {
+  0% {
+    transform: translateY(0) translateX(0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(100vw) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* scroll  */
+body {
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --background: var(--black);
+  --accent: var(--sky);
+}
+
+.progress {
+  position: sticky;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.progress svg {
+  transform: translateX(-100px) rotate(-90deg);
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 5%;
+  fill: none;
+}
+
+.bg {
+  stroke: var(--accent);
+  opacity: 0.2;
+}
+
+.progress .indicator {
+  stroke: var(--accent);
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 5px;
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--background);
+}
+
+/* coustom css */
+
+.custom-rounded {
+  border-radius: 42% 58% 43% 57% / 67% 28% 72% 33%;
+}
+
+.custom-shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes flip {
+  0%,
+  100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+}
+
+.flip-animation {
+  animation: flip 5s infinite;
+  backface-visibility: hidden;
+}
+
+/* Custom styles */
+.bouncy-text {
+  font-family: "Shantell Sans", sans-serif;
+  font-size: 20px;
+  line-height: 72px;
+  text-align: start;
+  animation: bounce 0.5s linear 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    font-variation-settings: "BNCE" 50;
+  }
+  to {
+    font-variation-settings: "BNCE" -50;
+  }
+}
+
+.fade-enter-active {
+  transition: opacity 0.5s ease; /* Apply transition on opacity */
+}
+.fade-enter {
+  opacity: 0; /* Initially hide the paragraph */
+}
+
+/* meteor effect */
+@keyframes meteor {
+  0% {
+    transform: rotate(215deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(215deg) translateX(-500px);
+    opacity: 0;
+  }
+}
+
+.meteor-effect {
+  animation: meteor 5s linear infinite;
+}
+
+/* media query */
+@layer components {
+  .shadow-text {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-8xl text-gray-600 opacity-10 font-black mt-7 dark:text-gray-400;
+  }
+}
+@media (min-width: 768px) {
+  .text-50px {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: bold !important;
+  letter-spacing: 5px !important;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 64px;
+  background: linear-gradient(
+    to right,
+    hwb(0 99% 1%) 0,
+    hsl(184, 100%, 52%) 10%,
+    hsl(0, 0%, 100%) 20%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s infinite linear;
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
+
+/* moving div */
+
+/* InfiniteMovingDivs.css */
+.infinite-moving-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+}
+
+.moving-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  background-color: #3498db; /* Example background color */
+  animation: move-right 10s linear infinite;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Offset each div for demonstration */
+.moving-div:nth-child(2) {
+  background-color: #e74c3c; /* Different color */
+  animation-delay: -5s; /* Delayed start */
+}
+
+.moving-div:nth-child(3) {
+  background-color: #2ecc71; /* Another different color */
+  animation-delay: -2.5s; /* Delayed start */
+}
