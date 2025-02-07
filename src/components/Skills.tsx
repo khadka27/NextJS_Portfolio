@@ -1,139 +1,149 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
-import html from "./Images/html.png";
-import css from "./Images/css.png";
-import javascript from "./Images/javascript.png";
-import react from "./Images/react.png";
-import bootstrap from "./Images/bootstrap.png";
-import tailwind from "./Images/tailwind.png";
+import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import Myskills from "./myskills";
 
-const frontendSkills = [
+const skills = [
   {
-    image: html,
-    title: "HTML",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+    title: "HTML5",
     link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
   {
-    image: css,
-    title: "CSS",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+    title: "CSS3",
     link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
-    image: javascript,
-    title: "JavaScript",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    title: "JavaScript (ES6+)",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
-    image: react,
-    title: "React",
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    title: "React.js",
     link: "https://reactjs.org/",
   },
   {
-    image: tailwind,
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+    title: "TypeScript",
+    link: "https://www.typescriptlang.org/",
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+    title: "Node.js",
+    link: "https://nodejs.org/",
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+    title: "Express.js",
+    link: "https://expressjs.com/",
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/en/4/45/MongoDB-Logo.svg",
+    title: "MongoDB",
+    link: "https://www.mongodb.com/",
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg",
+    title: "MySQL",
+    link: "https://www.mysql.com/",
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+    title: "PostgreSQL",
+    link: "https://www.postgresql.org/",
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg",
+    title: "Git",
+    link: "https://git-scm.com/",
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+    title: "GitHub",
+    link: "https://github.com/",
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
+    title: "VS Code",
+    link: "https://code.visualstudio.com/",
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
     title: "Tailwind CSS",
     link: "https://tailwindcss.com/",
   },
   {
-    image: bootstrap,
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
     title: "Bootstrap",
     link: "https://getbootstrap.com/",
   },
 ];
 
-const backendSkills = [
-  {
-    image: html,
-    title: "Node.js",
-    link: "https://nodejs.org/",
-  },
-  {
-    image: html,
-    title: "Python",
-    link: "https://www.python.org/",
-  },
-  {
-    image: html,
-    title: "Java",
-    link: "https://www.oracle.com/java/",
-  },
-  {
-    image: html,
-    title: "Django",
-    link: "https://www.djangoproject.com/",
-  },
-];
-
-const SkillBox = ({
-  image,
-  title,
-  link,
-}: {
-  image: StaticImageData;
-  title: string;
-  link: string;
-}) => {
+const SkillBox = ({ image, title, link }: any) => {
   return (
-    <div className="skill-box px-2 py-4 sm:px-4 mx-2 sm:mx-4">
-      <div className="flex flex-col items-center">
-        <Link href={link} legacyBehavior>
-          <a target="_blank" rel="noopener noreferrer">
-            <div className="rounded-full overflow-hidden mb-2 border-2 border-gray-300 p-1 shadow-md transition-transform transform hover:scale-105 hover:border-teal-400 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-              <Image src={image} alt={title} width={50} height={50} />
-            </div>
-          </a>
-        </Link>
-        <h3 className="font-semibold text-center text-sm sm:text-base">
-          <Link href={link} legacyBehavior>
-            <a target="_blank" rel="noopener noreferrer">
-              {title}
-            </a>
-          </Link>
-        </h3>
-      </div>
-    </div>
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      className="skill-box bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all cursor-pointer flex flex-col items-center justify-center"
+    >
+      <Link href={link} legacyBehavior>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center"
+        >
+          <div className="w-24 h-24 flex items-center justify-center rounded-full bg-gray-100 p-3 shadow-md">
+            <Image
+              src={image}
+              alt={title}
+              width={70}
+              height={70}
+              className="object-contain"
+            />
+          </div>
+          <h3 className="mt-3 font-semibold text-center text-lg text-gray-800 dark:text-gray-200">
+            {title}
+          </h3>
+        </a>
+      </Link>
+    </motion.div>
   );
 };
 
 export default function Home() {
   return (
-    <div id="skill" className="min-h-screen py-10 bg-gray-200 dark:bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-center">
-          <div className="relative z-10 text-center">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4">My Skills</h2>
-          </div>
-          <h1 className="shadow-text">Skills</h1>
-        </div>
-        <div className="section mb-10">
-          <h2 className="text-center text-2xl font-bold mb-6">
-            Frontend Skills
+    <div id="skill" className="min-h-screen py-16 bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-6 sm:px-12">
+        <div className="relative text-center mb-16">
+          <h2 className="text-5xl font-extrabold text-gray-800 dark:text-white">
+            SKILLS
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {frontendSkills.map((skill, index) => (
-              <SkillBox
-                key={index}
-                image={skill.image}
-                title={skill.title}
-                link={skill.link}
-              />
-            ))}
-          </div>
+          <h1 className="shadow-text">SKILLS</h1>
         </div>
-        <div className="section">
-          <h2 className="text-center text-2xl font-bold mb-6">
-            Backend Skills
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {backendSkills.map((skill, index) => (
-              <SkillBox
-                key={index}
-                image={skill.image}
-                title={skill.title}
-                link={skill.link}
-              />
-            ))}
-          </div>
+        <Myskills />
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+          {skills.map((skill, index) => (
+            <SkillBox
+              key={index}
+              image={skill.image}
+              title={skill.title}
+              link={skill.link}
+            />
+          ))}
         </div>
       </div>
     </div>
