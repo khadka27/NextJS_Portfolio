@@ -5,10 +5,10 @@ function About() {
   return (
     <div
       id="about"
-      className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+      className="min-h-screen bg-gradient-to-r from-blue-50 to-blue-200 dark:from-gray-900 dark:to-gray-900 py-10"
     >
       <main className="p-8">
-        <section className="max-w-4xl mx-auto">
+        <section className="max-w-4xl mx-auto ">
           <AnimatedSection />
           <AboutMeTable />
         </section>

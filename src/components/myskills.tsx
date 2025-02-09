@@ -26,7 +26,7 @@ const descriptions = [
 const InfoCard = ({ icon, title, description }: any) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
-    className="flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow max-w-xs mx-auto"
+    className="flex flex-col items-center p-6 bg-gradient-to-r from-blue-50 to-blue-200 dark:from-gray-900 dark:to-gray-900 rounded-lg shadow-md hover:shadow-xl transition-shadow max-w-xs mx-auto"
   >
     <div className="w-16 h-16 mb-4">
       <Image

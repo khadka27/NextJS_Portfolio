@@ -6,6 +6,7 @@ import React from "react";
 import Item from "@/components/ui/scroll";
 import Skills from "@/components/Skills";
 import ContactForm from "@/components/contact";
+import CertificationsPage from "@/components/Certifications";
 
 function apps() {
   return (
@@ -16,6 +17,7 @@ function apps() {
       <Project />
       <Skills />
       <Slogan />
+      <CertificationsPage />
       <ContactForm />
     </div>
   );

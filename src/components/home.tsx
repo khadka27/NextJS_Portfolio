@@ -6,7 +6,6 @@ import Typewriter from "typewriter-effect";
 import AboutImage from "./Images/homepage.png"; // Adjust the path to your image
 import logo from "./Images/logo.png"; // Adjust the path to your image
 import SocialIcons from "./SocialIcons";
-import { Globes } from "./globe";
 import Link from "next/link";
 
 const MotionImage = motion(Image);
@@ -22,7 +21,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <section className="bg-white dark:bg-gray-900 mt-1">
+    <section className="bg-gradient-to-r from-blue-50 to-blue-200 dark:from-gray-900 dark:to-gray-900 mt-1">
       <div className="text-white dark:text-red-600"></div>
       {/* <div className="h-10 w-[310px] flex justify-end ml-[78%] ">
         <Globes  />
@@ -73,7 +72,7 @@ const HomePage = () => {
                 strings: [
                   "Abishek Khadka",
                   "Web Developer",
-                  "Freelance Writer",
+                  "Freelance Developer",
                 ],
                 deleteSpeed: 50,
                 autoStart: true,
@@ -89,7 +88,7 @@ const HomePage = () => {
           </p>
           <div className="mt-8">
             <Link
-              href=".hire"
+              href="#contact"
               className="px-4 py-3 text-white bg-blue-500 rounded-md hover:bg-blue-600"
             >
               Hire me

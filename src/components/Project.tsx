@@ -5,7 +5,7 @@ function Project() {
   return (
     <div
       id="project"
-      className=" id='project' min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 "
+      className="min-h-screen bg-gradient-to-r from-blue-50 to-blue-200 dark:from-gray-900 dark:to-gray-900 py-10"
     >
       <div className="relative flex items-center justify-center ">
         <div className="relative z-10 text-center">
@@ -13,7 +13,7 @@ function Project() {
         </div>
         <h1 className="shadow-text">Projects</h1>
       </div>
-      <div className=" p-4 shadow-md flex justify-between items-center bg-gray-100 dark:bg-gray-900">
+      <div className=" p-4 shadow-md flex justify-between items-center bg-gradient-to-r from-blue-50 to-blue-200 dark:from-gray-900 dark:to-gray-900">
         <CardHoverEffectDemo />
       </div>
     </div>

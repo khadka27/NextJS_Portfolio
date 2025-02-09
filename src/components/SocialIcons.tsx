@@ -19,25 +19,25 @@ const socialLinks = [
     id: 1,
     name: "Facebook",
     image: facebookImage.src,
-    href: "https://www.facebook.com",
+    href: "https://www.facebook.com/khadka27",
   },
   {
     id: 2,
     name: "Instagram",
     image: instagramImage.src,
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/khadka_27",
   },
   {
     id: 3,
     name: "GitHub",
     image: gitImage.src, // Adjust this path as per your actual file structure
-    href: "https://www.twitter.com",
+    href: "https://www.twitter.com/khadka27",
   },
   {
     id: 4,
     name: "LinkedIn",
     image: linkedinImage.src, // Adjust this path as per your actual file structure
-    href: "https://www.linkedin.com",
+    href: "www.linkedin.com/in/abishek-khadka-804701259",
   },
 ];
 

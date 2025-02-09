@@ -15,22 +15,22 @@ const AboutMePage = () => {
         <h1 className="shadow-text">About</h1>
       </div>
 
-      <p className="mt-10 text-justify">
-        I am a self-taught web developer and freelance writer. I have been
-        working in this field for more than 2 years. I have worked with
-        different clients and companies. I have a good understanding of
-        different programming languages and frameworks. I am also good at
-        writing articles and blogs. I have written articles on different topics
-        like technology, health, and fitness. I am passionate about learning new
-        things and improving my skills. I am a hardworking and dedicated person.
-        I always try to give my best in everything I do. I am looking for new
-        opportunities and challenges to grow and improve myself. I am confident
-        that I can be a valuable asset to any organization. I am looking forward
-        to working with you. Thank you for considering my application. I hope to
-        hear from you soon.
+      <p className="mt-10 text-justify text-gray-900 dark:text-gray-300">
+        I am a self-learned web developer and freelance. I have been working in
+        this field for more than 2 years. I have worked with different clients
+        and companies. I have a good understanding of different programming
+        languages and frameworks. I am also good at writing articles and blogs.
+        I have written articles on different topics like technology, health, and
+        fitness. I am passionate about learning new things and improving my
+        skills. I am a hardworking and dedicated person. I always try to give my
+        best in everything I do. I am looking for new opportunities and
+        challenges to grow and improve myself. I am confident that I can be a
+        valuable asset to any organization. I am looking forward to working with
+        you. Thank you for considering my application. I hope to hear from you
+        soon.
       </p>
 
-      <div className="relative flex flex-col md:flex-row items-center md:items-start justify-center min-h-screen px-6 py-12">
+      <div className="relative flex flex-col md:flex-row items-center md:items-start justify-center  px-6 py-12">
         <div className="md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0 mr-11">
           <Image
             src={about}
@@ -41,7 +41,7 @@ const AboutMePage = () => {
           />
         </div>
 
-        <div className="md:w-1/2 relative z-10 md:pl-12">
+        <div className="md:w-1/2 relative z-10 md:pl-12 text-gray-900 dark:text-gray-300">
           <div className="relative z-20 p-4">
             <ul className="mb-8 space-y-2">
               <li className="mb-4 font-bold ">

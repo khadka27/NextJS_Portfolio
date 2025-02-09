@@ -125,7 +125,10 @@ const SkillBox = ({ image, title, link }: any) => {
 
 export default function Home() {
   return (
-    <div id="skill" className="min-h-screen py-16 bg-white dark:bg-gray-900">
+    <div
+      id="skill"
+      className="min-h-screen py-16 bg-gradient-to-r from-blue-50 to-blue-200 dark:from-gray-900 dark:to-gray-900"
+    >
       <div className="container mx-auto px-6 sm:px-12">
         <div className="relative text-center mb-16">
           <h2 className="text-5xl font-extrabold text-gray-800 dark:text-white">
